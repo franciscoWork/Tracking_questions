@@ -1,0 +1,8 @@
+<br>
+<br>
+<%= form_with(model: @formularios, url: formularios_path, method: :post) do |form| %>
+    <%= form.label :content %>
+    <%= form.check_box :answer_yes_no %>
+
+    <%= form.submit 'Enviar respuesta' %>
+<% end %>

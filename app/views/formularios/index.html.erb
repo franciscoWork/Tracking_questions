@@ -1,0 +1,9 @@
+<% @formularios.each do |formulario| %>
+  <p><strong>Pregunta:</strong> <%= formulario.content %></p>
+  <%= form_with(model: @formularios, url: formularios_path, method: :post) do |form| %>
+    <%= form.check_box :answer %>
+
+    <%= form.submit 'Enviar respuesta' %>
+<% end %>
+ 
+<% end %>
